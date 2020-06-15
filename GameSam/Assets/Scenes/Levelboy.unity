@@ -408,6 +408,7 @@ MonoBehaviour:
   Player1Proper: {fileID: 2065465980}
   Player2: {fileID: 440442587}
   Player2Proper: {fileID: 1260848251518767418}
+  crystalize: {fileID: 1260848251518767360}
   Started: 0
 --- !u!114 &98899446
 MonoBehaviour:
@@ -447,6 +448,7 @@ MonoBehaviour:
   ServerIP: 148.197.44.174
   Player: {fileID: 0}
   spawn: {fileID: 0}
+  crystalize: {fileID: 2065465981}
 --- !u!1 &117668715
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,9 +654,9 @@ MonoBehaviour:
     ServerOwned: 0
   rigid: {fileID: 1260848251518767417}
   ID: 1
-  SyncDistance: 0.1
+  SyncDistance: 0.016
   SyncRotation: 0.1
-  SyncVelocity: 0.1
+  SyncVelocity: 0.016
   UpdateRate: 2
   Player: 0
   ServerOwned: 0
@@ -1179,9 +1181,9 @@ MonoBehaviour:
     ServerOwned: 0
   rigid: {fileID: 944586261}
   ID: 0
-  SyncDistance: 0.1
+  SyncDistance: 0.016
   SyncRotation: 0.1
-  SyncVelocity: 0.1
+  SyncVelocity: 0.016
   UpdateRate: 2
   Player: 0
   ServerOwned: 1
@@ -3211,6 +3213,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39a45eef64e54ec4ea17d778fd0616f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2065465981 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1260848251346767831, guid: d87c12b7a076fa04d918b93994a457ff,
+    type: 3}
+  m_PrefabInstance: {fileID: 2065465979}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944586256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2960e7e57e5322748b4eb29142d88036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2080464440 stripped

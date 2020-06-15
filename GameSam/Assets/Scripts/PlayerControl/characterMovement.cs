@@ -94,6 +94,28 @@ public class characterMovement : MonoBehaviour
         {
             //Camera.SetActive(false);
             //OtherPlayer.Camera.SetActive(true);
+
+            if (rigidBody.velocity.x != 0)
+            {
+
+                if(playerDirection!=1 && rigidBody.velocity.x>0)
+                {
+                    flipPlayer();
+                }
+                else if(playerDirection != -1 && rigidBody.velocity.x<0)
+                {
+                    flipPlayer();
+                }
+
+                animator.SetBool("isMoving", true);
+            }
+            else
+            {
+                animator.SetBool("isMoving", false);
+            }
+            
+
+
         }
         Camera.SetActive(Player1);
 

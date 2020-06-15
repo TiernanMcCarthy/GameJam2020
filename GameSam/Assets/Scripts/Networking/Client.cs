@@ -36,6 +36,8 @@ public class Client : MonoBehaviour
 
     public SpawnPlayer spawn;
 
+    public crystalizePlayer crystalize;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -160,6 +162,11 @@ public class Client : MonoBehaviour
                 nPlayerNew PlayerType = (nPlayerNew)msg;
               //  spawn.Spawn(true, PlayerType.ID);
                 break;
+            case NetOP.Action:
+                nAction ActionToggle = (nAction)msg;
+                crystalize.crystalize();
+                break;
+
         }
 
     }

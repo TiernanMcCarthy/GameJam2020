@@ -61,21 +61,21 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 10154}
+      Script: {instanceID: 10124}
     - Class: 114
-      Script: {instanceID: 10716}
+      Script: {instanceID: 10162}
     - Class: 114
-      Script: {instanceID: 11602}
+      Script: {instanceID: 10574}
     - Class: 114
-      Script: {instanceID: 11950}
+      Script: {instanceID: 10690}
     - Class: 114
-      Script: {instanceID: 11982}
+      Script: {instanceID: 11576}
     - Class: 114
-      Script: {instanceID: 12162}
+      Script: {instanceID: 11924}
     - Class: 114
-      Script: {instanceID: 12164}
+      Script: {instanceID: 11956}
     - Class: 114
-      Script: {instanceID: 12166}
+      Script: {instanceID: 11992}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 136
@@ -112,41 +112,41 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9710}
+      Script: {instanceID: 9680}
     - Class: 114
-      Script: {instanceID: 9752}
+      Script: {instanceID: 9722}
     - Class: 114
-      Script: {instanceID: 9846}
+      Script: {instanceID: 9816}
     - Class: 114
-      Script: {instanceID: 9848}
+      Script: {instanceID: 9818}
     - Class: 114
-      Script: {instanceID: 9906}
+      Script: {instanceID: 9876}
+    - Class: 114
+      Script: {instanceID: 9888}
     - Class: 114
       Script: {instanceID: 9918}
     - Class: 114
-      Script: {instanceID: 9948}
+      Script: {instanceID: 9920}
     - Class: 114
-      Script: {instanceID: 9950}
+      Script: {instanceID: 9932}
     - Class: 114
-      Script: {instanceID: 9962}
+      Script: {instanceID: 10146}
     - Class: 114
-      Script: {instanceID: 10176}
+      Script: {instanceID: 10428}
     - Class: 114
-      Script: {instanceID: 10456}
+      Script: {instanceID: 10700}
     - Class: 114
-      Script: {instanceID: 10726}
+      Script: {instanceID: 10846}
     - Class: 114
-      Script: {instanceID: 10872}
+      Script: {instanceID: 10912}
     - Class: 114
-      Script: {instanceID: 10938}
+      Script: {instanceID: 11134}
     - Class: 114
-      Script: {instanceID: 11160}
+      Script: {instanceID: 11288}
     - Class: 114
-      Script: {instanceID: 11314}
+      Script: {instanceID: 11468}
     - Class: 114
-      Script: {instanceID: 11494}
-    - Class: 114
-      Script: {instanceID: 11946}
+      Script: {instanceID: 11920}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -156,6 +156,8 @@ ScriptsOnlyBuild:
     - Class: 136
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -342,6 +344,12 @@ ScriptsOnlyBuild:
     className: NetworkProximityChecker
   - hash:
       serializedVersion: 2
+      Hash: afe120359d30fa5ee8982ed503937285
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: jumpFix
+  - hash:
+      serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -442,6 +450,12 @@ ScriptsOnlyBuild:
     assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
     namespaceName: UnityEngine.Networking
     className: NetworkTransformVisualizer
+  - hash:
+      serializedVersion: 2
+      Hash: d92d5b66c5d6d7df64b903ca836d0b17
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: crystalizePlayer
   - hash:
       serializedVersion: 2
       Hash: 5319fc62f0a4f4194f027bd32a69e527
@@ -666,7 +680,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 721016204c58cb95e1129e54e27f6948
+      Hash: af900f574e0a99b6abfbaa71a70b92a2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Client
@@ -768,7 +782,7 @@ ScriptsOnlyBuild:
     className: StandaloneInputModule
   - hash:
       serializedVersion: 2
-      Hash: 05adb05ad208f4763962a902c7c5c909
+      Hash: 7c5703e942715a90b1b1785dfdfa498f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Server
@@ -804,28 +818,16 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
-      Hash: c3d3430df9e3ea95e3e3d587961390fb
-    assemblyName: Unity.Timeline.dll
-    namespaceName: UnityEngine.Timeline
-    className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: afe120359d30fa5ee8982ed503937285
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: jumpFix
-  - hash:
-      serializedVersion: 2
-      Hash: d92d5b66c5d6d7df64b903ca836d0b17
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: crystalizePlayer
-  - hash:
-      serializedVersion: 2
       Hash: 22c398c6bd3effdc93ea35b85d997e07
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: characterMovement
+  - hash:
+      serializedVersion: 2
+      Hash: c3d3430df9e3ea95e3e3d587961390fb
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: PlayableTrack
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity

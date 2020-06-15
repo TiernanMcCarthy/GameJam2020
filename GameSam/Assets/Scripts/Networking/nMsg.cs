@@ -10,6 +10,8 @@ public static class NetOP
     public const int NewObject = 3; //Creation of new object to sync
 
     public const int NewPlayer = 4;
+
+    public const int Action = 5;
 }
 
 

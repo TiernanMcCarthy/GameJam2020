@@ -29,6 +29,8 @@ public class Server : MonoBehaviour
     public FakeControllerBoy Player2;
     public characterMovement Player2Proper;
 
+    public crystalizePlayer crystalize;
+
     private int rechost;
 
     //public SpawnPlayer player;
@@ -243,6 +245,10 @@ public class Server : MonoBehaviour
                 break;
             case NetOP.SyncSceneObjects: //recieve objects and sync unity objects of the correct ID
                 ObjectManager.SyncObjects(((UpdatedObjectContainer)msg).SceneObjects);
+                break;
+            case NetOP.Action:
+                nAction ActionToggle = (nAction)msg;
+                crystalize.crystalize();
                 break;
         }
 
