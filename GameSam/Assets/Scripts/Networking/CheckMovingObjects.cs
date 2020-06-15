@@ -58,7 +58,7 @@ public class CheckMovingObjects : MonoBehaviour
         for(int i=0; i<NetworkedObjects.Count;i++) //Add objects that need to be in the transmit list
         {
            // if(NetworkedObjects[i].NetworkInstance.Transmit==true) 
-           if(NetworkedObjects[i].CheckIfSendWorthWhile()==true)
+           if(NetworkedObjects[i].CheckIfSendWorthWhile()==true && NetworkedObjects[i].ServerOwned==Hosting)
             {
                 //  Debug.Log((NetworkedObjects[i].NetworkInstance.Transmit));
 
@@ -134,7 +134,8 @@ public class CheckMovingObjects : MonoBehaviour
         {
             for(int Recieved=0; Recieved<temp.Count; Recieved++)
             {
-                if (temp[Recieved].ObjectID == NetworkedObjects[Local].NetworkInstance.ObjectID && temp[Recieved].ObjectID!=PlayerID)
+                //if (temp[Recieved].ObjectID == NetworkedObjects[Local].NetworkInstance.ObjectID && temp[Recieved].ObjectID != PlayerID)
+                if (temp[Recieved].ObjectID == NetworkedObjects[Local].NetworkInstance.ObjectID)
                 {
                     NetworkedObjects[Local].transform.position = temp[Recieved].Position;
                     NetworkedObjects[Local].transform.rotation = Quaternion.Euler(temp[Recieved].RotationEuler);

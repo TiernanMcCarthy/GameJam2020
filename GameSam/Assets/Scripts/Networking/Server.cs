@@ -25,7 +25,9 @@ public class Server : MonoBehaviour
     List<int> Clients;
 
     public FakeControllerBoy Player1;
+    public characterMovement Player1Proper;
     public FakeControllerBoy Player2;
+    public characterMovement Player2Proper;
 
     private int rechost;
 
@@ -44,22 +46,29 @@ public class Server : MonoBehaviour
                                                                 //initialise the server
         Clients = new List<int>();
         DontDestroyOnLoad(this);
-
+        Player2.NTWK.ServerOwned = false;
         IPHolder IP = FindObjectOfType<IPHolder>();
         if (IP.IPAddress == "")
         {
-            Player1.Playing = true;
+            //Player1.Playing = true;
+            Player1Proper.Player1 = true;
+            Player2Proper.Player1 = false;
             Player1.NTWK.ServerOwned = true;
+            Player2.NTWK.ServerOwned = false;
             ObjectManager.Hosting = true;
             ObjectManager.Serv = this;
 
 
             Init();
             SpawnObject(transform.position);
-            
+
         }
-        Player2.Playing = true;
-        Player1.NTWK.ServerOwned = false;
+        else
+        {
+            Player2Proper.Player1 = true;
+            Player1Proper.Player1 = false;
+            Player2.NTWK.ServerOwned = false;
+        }
     }
 
     // Update is called once per frame

@@ -49,7 +49,7 @@ public class Menu : MonoBehaviour
     public void Host()
     {
         Destroy(Canvas);
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Levelboy");
         Debug.Log("DO somehting here");
     }
 
@@ -64,7 +64,7 @@ public class Menu : MonoBehaviour
     public void JoinServer()
     {
         IP.IPAddress = IPEntry.text;
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Levelboy");
     }
 
     public void Back()

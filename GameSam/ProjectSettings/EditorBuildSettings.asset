@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 90f4efe56d47b57458891d79f41aa4af
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 6b8d49a7d00c4f14183ecac92709fe1f
+    path: Assets/Scenes/Levelboy.unity
+    guid: 837a61436e991774aac2389bb1a3fae8
   m_configObjects: {}

@@ -51,6 +51,7 @@ public class Client : MonoBehaviour
 
             checkMoving.Hosting = false;
             checkMoving.Cli = this;
+            //Player.ServerOwned = false;
             if (new SerialVector3(0, 0, 0) == bob)
             {
 
@@ -145,9 +146,9 @@ public class Client : MonoBehaviour
                 break;
             case NetOP.Position:
                 n_Position Decode = (n_Position)msg;
-                Player.NetworkInstance.ObjectID = (int)Decode.Position.x;
-                Player.ID = (int)Decode.Position.x;
-                checkMoving.PlayerID = Player.ID;
+                //Player.NetworkInstance.ObjectID = (int)Decode.Position.x;
+                //Player.ID = (int)Decode.Position.x;
+                //checkMoving.PlayerID = Player.ID;
                 //Test.transform.position = ((n_Position)msg).Position+OffsetDistance;
                 break;
             case NetOP.SyncSceneObjects:
