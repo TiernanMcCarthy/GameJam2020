@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":51.93143844604492,"y":-2.63101863861084,"z":-67.57844543457031},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":46.168113708496097,"orthographic":true}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":6.779204368591309,"y":-5.9482831954956059,"z":-38.324222564697269},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":20.602054595947267,"orthographic":true}
+>>>>>>> SamEdits
