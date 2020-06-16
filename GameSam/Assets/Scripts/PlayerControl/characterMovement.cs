@@ -26,6 +26,12 @@ public class characterMovement : MonoBehaviour
     [Header("Jumping variables")]
     public float jumpForce;
 
+    public bool Player1;
+
+    public characterMovement OtherPlayer;
+
+    public GameObject Camera;
+
     void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
@@ -50,42 +56,69 @@ public class characterMovement : MonoBehaviour
     }
     private void movePlayer()
     {
-        xMove = Input.GetAxisRaw("Horizontal");
-        if (xMove != 0)
+        if (Player1 == true)
         {
-            isMoving = true;
+            xMove = Input.GetAxisRaw("Horizontal");
+            if (xMove != 0)
+            {
+                isMoving = true;
+            }
+            else
+            {
+                isMoving = false;
+            }
+            animator.SetBool("isMoving", isMoving);
+            if (xMove > 0.0f && playerDirection != 1)
+            {
+                flipPlayer();
+            }
+            else if (xMove < 0.0f && playerDirection != -1)
+            {
+                flipPlayer();
+            }
+            if (grounded)
+            {
+                rigidBody.velocity = new Vector3(xMove * speed, rigidBody.velocity.y, 0);
+            }
+            if (!grounded)
+            {
+                if (rigidBody.velocity.x == 0)
+                {
+                    rigidBody.velocity = new Vector3(xMove * 5, rigidBody.velocity.y, 0);
+                }
+
+            }
+            if (Input.GetButtonDown("Jump") && grounded)
+            {
+
+                jump();
+            }
         }
         else
         {
-            isMoving = false;
-        }
-        animator.SetBool("isMoving", isMoving);
-        if (xMove > 0.0f && playerDirection != 1)
-        {
-            flipPlayer();
-        }
-        else if (xMove < 0.0f && playerDirection != -1)
-        {
-            flipPlayer();
-        }
-        if (grounded)
-        {
-            rigidBody.velocity = new Vector3(xMove * speed, rigidBody.velocity.y,0);
-        }
-        if(!grounded)
-        {
-            if(rigidBody.velocity.x == 0)
-            {
-                rigidBody.velocity = new Vector3(xMove * 5, rigidBody.velocity.y, 0);
-            }
-            
-        }
-        if (Input.GetButtonDown("Jump") && grounded)
-        {
-           
-            jump();
-        }
 
+            if (rigidBody.velocity.x != 0)
+            {
+
+                if (playerDirection != 1 && rigidBody.velocity.x > 0)
+                {
+                    flipPlayer();
+                }
+                else if (playerDirection != -1 && rigidBody.velocity.x < 0)
+                {
+                    flipPlayer();
+                }
+
+                animator.SetBool("isMoving", true);
+            }
+            else
+            {
+                animator.SetBool("isMoving", false);
+            }
+
+
+        }
+        Camera.SetActive(Player1);
     }
     private void jump()
     {

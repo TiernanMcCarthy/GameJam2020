@@ -9,24 +9,42 @@ public class crystalizePlayer : MonoBehaviour
     Animator animator;
     bool isCrystal = false;
     characterMovement movement;
+
+    CheckMovingObjects Check;
     void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         movement = GetComponent<characterMovement>();
+
+        Check = FindObjectOfType<CheckMovingObjects>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.C))
+        if (movement.Player1)
         {
-            crystalize();
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+                crystalize();
+                nAction act = new nAction();
+                act.OP = NetOP.Action;
+                if (Check.Hosting)
+                {
+                    Check.Serv.SendClientData(act);
+                }
+                else
+                {
+                    Check.Cli.SendServer(act);
+                }
+            }
         }
     }
 
-    void crystalize()
+    public void crystalize()
     {
+     
         if(!isCrystal)
         {
             rigidBody.velocity = new Vector3(0, 0, 0);
