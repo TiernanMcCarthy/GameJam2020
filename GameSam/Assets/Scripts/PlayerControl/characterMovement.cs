@@ -72,6 +72,14 @@ public class characterMovement : MonoBehaviour
         {
             rigidBody.velocity = new Vector3(xMove * speed, rigidBody.velocity.y,0);
         }
+        if(!grounded)
+        {
+            if(rigidBody.velocity.x == 0)
+            {
+                rigidBody.velocity = new Vector3(xMove * 5, rigidBody.velocity.y, 0);
+            }
+            
+        }
         if (Input.GetButtonDown("Jump") && grounded)
         {
            
@@ -90,6 +98,10 @@ public class characterMovement : MonoBehaviour
         playerDirection *= -1;
         shouldFlip = !shouldFlip;
         spriteRender.flipX = shouldFlip;
+        if(!grounded)
+        {
+            rigidBody.velocity = new Vector3(0,rigidBody.velocity.y,0);
+        }
         //transform.Rotate(0, 180.0f, 0);
     }
     private void checkSurroundings()
