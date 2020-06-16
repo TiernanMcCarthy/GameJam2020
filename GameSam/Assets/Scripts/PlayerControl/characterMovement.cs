@@ -32,6 +32,8 @@ public class characterMovement : MonoBehaviour
 
     public GameObject Camera;
 
+    public CheckPoint SpawnPoint;
+
     void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
@@ -140,6 +142,21 @@ public class characterMovement : MonoBehaviour
     private void checkSurroundings()
     {
         grounded = Physics.CheckSphere(groundChecker.position, GroundCheckRadius, groundLayerMask);
+    }
+
+    public void Respawn()
+    {
+        Debug.Log("Spongebob me boi I've snorted an entire suitcase of ketamine and I'm going to fucking die");
+        if (SpawnPoint != null)
+        {
+            transform.position = SpawnPoint.transform.position;
+            rigidBody.velocity = Vector3.zero;
+        }
+        else
+        {
+            transform.position = Vector3.zero;
+            rigidBody.velocity = Vector3.zero;
+        }
     }
 
 }
