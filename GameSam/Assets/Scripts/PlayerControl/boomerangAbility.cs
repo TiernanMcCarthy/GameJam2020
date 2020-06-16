@@ -19,6 +19,7 @@ public class boomerangAbility : MonoBehaviour
     CapsuleCollider bmCollider;
     throwBoomerang throwScript;
 
+    CheckMovingObjects check;
 
     bool CollidedThisLife = false;
 
@@ -32,6 +33,7 @@ public class boomerangAbility : MonoBehaviour
         bmCollider = GetComponent<CapsuleCollider>();
         throwScript = owner.GetComponent<throwBoomerang>();
         Physics.IgnoreCollision(owner.GetComponent<CapsuleCollider>(), bmCollider);
+        check = FindObjectOfType<CheckMovingObjects>();
     }
 
     public void ResetFunction()
@@ -99,7 +101,16 @@ public class boomerangAbility : MonoBehaviour
             if (collision.gameObject == owner)
             {
                 throwScript.jumpOffBoomerang();
-                
+
+                if (!check.Hosting)
+                {
+                    n_Position Pos = new n_Position();
+                    Pos.OP = NetOP.Position;
+                    Pos.Position = throwScript.tempStander.transform.position;
+
+                    check.Cli.SendServer(Pos);
+                }
+
                 rigidBody.velocity = Vector3.zero;
                 transform.position = new Vector3(300, 300, 0);
                 isActive = false;

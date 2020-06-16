@@ -42,23 +42,26 @@ public class Client : MonoBehaviour
     void Start()
     {
         IPHolder IP = FindObjectOfType<IPHolder>();
-        if (IP.IPAddress != "")
+        if (IP != null)
         {
-            
-            //IPHolder IP = FindObjectOfType<IPHolder>();
-            ServerIP = IP.IPAddress;
-            Init();
-            spawn = FindObjectOfType<SpawnPlayer>();
-            SerialVector3 bob = new Vector3(0, 0, 0);
-
-            checkMoving.Hosting = false;
-            checkMoving.Cli = this;
-            //Player.ServerOwned = false;
-            if (new SerialVector3(0, 0, 0) == bob)
+            if (IP.IPAddress != "")
             {
 
+                //IPHolder IP = FindObjectOfType<IPHolder>();
+                ServerIP = IP.IPAddress;
+                Init();
+                spawn = FindObjectOfType<SpawnPlayer>();
+                SerialVector3 bob = new Vector3(0, 0, 0);
+
+                checkMoving.Hosting = false;
+                checkMoving.Cli = this;
+                //Player.ServerOwned = false;
+                if (new SerialVector3(0, 0, 0) == bob)
+                {
+
+                }
+                DontDestroyOnLoad(this);
             }
-            DontDestroyOnLoad(this);
         }
     }
 

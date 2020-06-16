@@ -50,26 +50,29 @@ public class Server : MonoBehaviour
         DontDestroyOnLoad(this);
         Player2.NTWK.ServerOwned = false;
         IPHolder IP = FindObjectOfType<IPHolder>();
-        if (IP.IPAddress == "")
+        if (IP != null)
         {
-            //Player1.Playing = true;
-            Player1Proper.Player1 = true;
-            Player2Proper.Player1 = false;
-            Player1.NTWK.ServerOwned = true;
-            Player2.NTWK.ServerOwned = false;
-            ObjectManager.Hosting = true;
-            ObjectManager.Serv = this;
+            if (IP.IPAddress == "")
+            {
+                //Player1.Playing = true;
+                Player1Proper.Player1 = true;
+                Player2Proper.Player1 = false;
+                Player1.NTWK.ServerOwned = true;
+                Player2.NTWK.ServerOwned = false;
+                ObjectManager.Hosting = true;
+                ObjectManager.Serv = this;
 
 
-            Init();
-            SpawnObject(transform.position);
+                Init();
+                SpawnObject(transform.position);
 
-        }
-        else
-        {
-            Player2Proper.Player1 = true;
-            Player1Proper.Player1 = false;
-            Player2.NTWK.ServerOwned = false;
+            }
+            else
+            {
+                Player2Proper.Player1 = true;
+                Player1Proper.Player1 = false;
+                Player2.NTWK.ServerOwned = false;
+            }
         }
     }
 
@@ -241,7 +244,8 @@ public class Server : MonoBehaviour
                 break;
             case NetOP.Position:
                 Debug.Log("New Position");
-                ClientObject.transform.position= ((n_Position)msg).Position;
+                Player1Proper.transform.position= ((n_Position)msg).Position;
+                Player1Proper.GetComponent<standOnBoomerang>().forcedOff();
                 break;
             case NetOP.SyncSceneObjects: //recieve objects and sync unity objects of the correct ID
                 ObjectManager.SyncObjects(((UpdatedObjectContainer)msg).SceneObjects);

@@ -30,6 +30,11 @@ public class standOnBoomerang : MonoBehaviour
             isRiding = false;
             Debug.Log("epic");
         }
+
+        if(isRiding==false)
+        {
+            movement.GetComponent<NetworkObjectScript>().Transmit = true;
+        }
     }
 
     public void forcedOff()
@@ -39,6 +44,7 @@ public class standOnBoomerang : MonoBehaviour
             rigidBody.isKinematic = false;
             this.transform.parent = null;
             collider.enabled = true;
+            transform.position = Vector3.zero;
             transform.position = new Vector3(transform.position.x + 2 * movement.playerDirection, transform.position.y + 2, transform.position.z);
             rigidBody.AddForce(Vector3.up * 10);
             isRiding = false;

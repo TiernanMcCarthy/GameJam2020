@@ -22,7 +22,7 @@ public class Button : MonoBehaviour
 
     public int Shots;
 
-    private int OriginalShots;
+    public int OriginalShots;
 
     public Goal EndTarget;
 
@@ -98,7 +98,7 @@ public class Button : MonoBehaviour
         {
             if (!Firing)
             {
-                Firing = true;
+                //Firing = true;
             }
 
             Firing = false;
