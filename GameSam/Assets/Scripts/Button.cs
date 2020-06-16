@@ -26,6 +26,8 @@ public class Button : MonoBehaviour
 
     public Goal EndTarget;
 
+
+    public bool Turret = false;
     void Awake()
     {
         Turrets = new List<Turret>();
@@ -42,22 +44,31 @@ public class Button : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Firing && Shots>=1)
+        if (Turret)
         {
-            if (Time.time - FireTime >= FireRate)
+            if (Firing && Shots >= 1)
             {
-                
-                int Index = Random.Range(0, Turrets.Count);
-                Debug.Log(Index);
-                Turrets[Index].FireProjectile();
+                if (Time.time - FireTime >= FireRate)
+                {
 
-                FireTime = Time.time;
-                Shots--;
+                    int Index = Random.Range(0, Turrets.Count);
+                    Debug.Log(Index);
+                    Turrets[Index].FireProjectile();
+
+                    FireTime = Time.time;
+                    Shots--;
+                }
             }
+            else if (Firing)
+            {
+                Debug.Log("WINNNNn");
+                EndTarget.ExecuteGoal();
+                Firing = false;
+            }
+
         }
         else if(Firing)
         {
-            Debug.Log("WINNNNn");
             EndTarget.ExecuteGoal();
             Firing = false;
         }
