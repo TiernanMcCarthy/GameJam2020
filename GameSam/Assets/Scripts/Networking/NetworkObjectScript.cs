@@ -25,6 +25,9 @@ public class NetworkObjectScript : MonoBehaviour
     public float UpdateRate =2.0f; //Two seconds
 
     public bool Player = false;
+
+    public bool Transmit = true;
+
     //Only transmit if the positions have changed enough to make it worthwhile
     SerialVector3 PreviousPosition, PreviousVelocity, PreviousRotation;
 
@@ -62,35 +65,36 @@ public class NetworkObjectScript : MonoBehaviour
 
     public bool CheckIfSendWorthWhile()
     {
-     //If too different from the other then update, or possibly look at different implementations
-       
-        
-        //If one of these parameters are met then send immedietly ? or bias it to send sooner, otherwise just update the position if there's some varience after two seconds or some other period
-        if(SyncDistance <= Vector3.Distance(NetworkInstance.Position,PreviousPosition))
-        {
-            UpdateClock();
-            return true;
-        }
+        //If too different from the other then update, or possibly look at different implementations
 
-        else if(SyncRotation <= Vector3.Distance(NetworkInstance.RotationEuler,PreviousRotation))
+        if (Transmit)
         {
-            UpdateClock();
-            return true;
-        }
+            //If one of these parameters are met then send immedietly ? or bias it to send sooner, otherwise just update the position if there's some varience after two seconds or some other period
+            if (SyncDistance <= Vector3.Distance(NetworkInstance.Position, PreviousPosition))
+            {
+                UpdateClock();
+                return true;
+            }
 
-        else if(SyncVelocity<= Vector3.Distance(NetworkInstance.Velocity,PreviousVelocity))
-        {
-            UpdateClock();
-            return true;
-        }
+            else if (SyncRotation <= Vector3.Distance(NetworkInstance.RotationEuler, PreviousRotation))
+            {
+                UpdateClock();
+                return true;
+            }
 
-        //If a two second period has been met from when this object was last updated, update this object.
-        if(Time.time-TimeCheck>=UpdateRate)
-        {
-            UpdateClock();
-            return true;
-        }
+            else if (SyncVelocity <= Vector3.Distance(NetworkInstance.Velocity, PreviousVelocity))
+            {
+                UpdateClock();
+                return true;
+            }
 
+            //If a two second period has been met from when this object was last updated, update this object.
+            if (Time.time - TimeCheck >= UpdateRate)
+            {
+                UpdateClock();
+                return true;
+            }
+        }
         //None of these parameters have been met, ignore it
         return false;
     }

@@ -101,7 +101,7 @@ public class characterMovement : MonoBehaviour
 
             if (rigidBody.velocity.x != 0)
             {
-
+                isMoving = true;
                 if (playerDirection != 1 && rigidBody.velocity.x > 0)
                 {
                     flipPlayer();
@@ -112,9 +112,11 @@ public class characterMovement : MonoBehaviour
                 }
 
                 animator.SetBool("isMoving", true);
+
             }
             else
             {
+                isMoving = false;
                 animator.SetBool("isMoving", false);
             }
 

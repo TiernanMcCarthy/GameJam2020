@@ -1,16 +1,26 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - BlockController
+    - Blocks
+    - Button
     - CheckMovingObjects
+    - CheckPoint
     - Client
+    - Door
     - FakeControllerBoy
     - IPHolder
     - Menu
     - NetworkObjectScript
+    - Projectile
     - Server
+    - Turret
+    - boomerangAbility
     - characterMovement
     - crystalizePlayer
     - jumpFix
+    - standOnBoomerang
+    - throwBoomerang
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
     - Cinemachine.CinemachineFramingTransposer
@@ -25,10 +35,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -74,30 +82,52 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 10204}
+      Script: {instanceID: 9832}
     - Class: 114
-      Script: {instanceID: 10546}
+      Script: {instanceID: 10174}
     - Class: 114
-      Script: {instanceID: 10654}
+      Script: {instanceID: 10216}
     - Class: 114
-      Script: {instanceID: 10908}
+      Script: {instanceID: 10256}
     - Class: 114
-      Script: {instanceID: 11416}
+      Script: {instanceID: 10562}
     - Class: 114
-      Script: {instanceID: 12114}
+      Script: {instanceID: 10670}
     - Class: 114
-      Script: {instanceID: 12222}
+      Script: {instanceID: 10792}
     - Class: 114
-      Script: {instanceID: 20362}
+      Script: {instanceID: 10936}
     - Class: 114
-      Script: {instanceID: 20372}
+      Script: {instanceID: 11128}
     - Class: 114
-      Script: {instanceID: 20398}
+      Script: {instanceID: 11174}
     - Class: 114
-      Script: {instanceID: 20404}
+      Script: {instanceID: 11440}
     - Class: 114
-      Script: {instanceID: 20430}
+      Script: {instanceID: 11462}
+    - Class: 114
+      Script: {instanceID: 11848}
+    - Class: 114
+      Script: {instanceID: 12008}
+    - Class: 114
+      Script: {instanceID: 12020}
+    - Class: 114
+      Script: {instanceID: 12178}
+    - Class: 114
+      Script: {instanceID: 12216}
+    - Class: 114
+      Script: {instanceID: 12278}
+    - Class: 114
+      Script: {instanceID: 12290}
+    - Class: 114
+      Script: {instanceID: 27538}
+    - Class: 114
+      Script: {instanceID: 27544}
+    - Class: 114
+      Script: {instanceID: 27564}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 135
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
@@ -107,7 +137,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
-    Assets/Scenes/MainMenu.unity:
+    Assets/Level Blockouts/MainMenu.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -135,39 +165,39 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9682}
     - Class: 114
-      Script: {instanceID: 9730}
+      Script: {instanceID: 9732}
     - Class: 114
-      Script: {instanceID: 9832}
+      Script: {instanceID: 9836}
     - Class: 114
-      Script: {instanceID: 9834}
+      Script: {instanceID: 9838}
     - Class: 114
-      Script: {instanceID: 9898}
+      Script: {instanceID: 9902}
     - Class: 114
-      Script: {instanceID: 9912}
+      Script: {instanceID: 9916}
     - Class: 114
-      Script: {instanceID: 9944}
+      Script: {instanceID: 9948}
     - Class: 114
-      Script: {instanceID: 9956}
+      Script: {instanceID: 9962}
     - Class: 114
-      Script: {instanceID: 10184}
+      Script: {instanceID: 10070}
     - Class: 114
-      Script: {instanceID: 10492}
+      Script: {instanceID: 10196}
     - Class: 114
-      Script: {instanceID: 10956}
+      Script: {instanceID: 10508}
     - Class: 114
-      Script: {instanceID: 11036}
+      Script: {instanceID: 10986}
     - Class: 114
-      Script: {instanceID: 11288}
+      Script: {instanceID: 11052}
     - Class: 114
-      Script: {instanceID: 11462}
+      Script: {instanceID: 11068}
     - Class: 114
-      Script: {instanceID: 11676}
+      Script: {instanceID: 11332}
     - Class: 114
-      Script: {instanceID: 12148}
+      Script: {instanceID: 11508}
     - Class: 114
-      Script: {instanceID: 20268}
+      Script: {instanceID: 11724}
     - Class: 114
-      Script: {instanceID: 20270}
+      Script: {instanceID: 12212}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -243,6 +273,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_ScrollbarEventHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 5e6425c3e655f60114a920f6368326cc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Button
   - hash:
       serializedVersion: 2
       Hash: 04e4a8b0447477cc4e933d9e5311188f
@@ -323,6 +359,12 @@ ScriptsOnlyBuild:
     className: NetworkTransform
   - hash:
       serializedVersion: 2
+      Hash: b72ac42341570866b7d6ee3396f749d5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PrefabHolder
+  - hash:
+      serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -333,6 +375,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineExternalCamera
+  - hash:
+      serializedVersion: 2
+      Hash: 2cd9c220bb7bef393fe305d67a6c4b6c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Menu
   - hash:
       serializedVersion: 2
       Hash: b5eb08b578a2f2d80bb106cbe65ab501
@@ -371,6 +419,12 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
+      Hash: ed3a00a2bb0897a9f0c1d54043c817e5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CheckMovingObjects
+  - hash:
+      serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -395,10 +449,22 @@ ScriptsOnlyBuild:
     className: AspectRatioFitter
   - hash:
       serializedVersion: 2
+      Hash: d62e1ee75568fb09742ab61c4d65a00f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FakeObjectType
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RectMask2D
+  - hash:
+      serializedVersion: 2
+      Hash: 5d48afe36fab88e724d6b28a10553550
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BlockController
   - hash:
       serializedVersion: 2
       Hash: 00274a21279f5cb831ce20f895049e38
@@ -533,6 +599,12 @@ ScriptsOnlyBuild:
     className: crystalizePlayer
   - hash:
       serializedVersion: 2
+      Hash: 5319fc62f0a4f4194f027bd32a69e527
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerTest
+  - hash:
+      serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -551,10 +623,28 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
+      Hash: 7d4631ed1640490316f1a3a2aad2470d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpawnPlayer
+  - hash:
+      serializedVersion: 2
+      Hash: 1dc3111cf66be94186d6c3235953613a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: NetworkObjectScript
+  - hash:
+      serializedVersion: 2
       Hash: 68ab7276019207d3f463a08f9ff97ff5
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineTriggerAction
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerController
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -594,6 +684,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Test
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAnimator
@@ -617,6 +713,12 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
+      Hash: d62e1ee75568fb09742ab61c4d65a00f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PrefabBasis
+  - hash:
+      serializedVersion: 2
       Hash: 694d20920c0e41f567e119f7159a3644
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -627,6 +729,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: dd2cfa69fbfa68adbe48382a5bf3daf8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: IPHolder
   - hash:
       serializedVersion: 2
       Hash: 516824a435828eadd660ef2f1658a48e
@@ -645,6 +753,18 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineTargetGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 13f8f373b951cbaf0f891949929b196a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Projectile
+  - hash:
+      serializedVersion: 2
+      Hash: eaee59c679b108b66eba93f4874e6225
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Door
   - hash:
       serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
@@ -687,6 +807,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineBlendListCamera
+  - hash:
+      serializedVersion: 2
+      Hash: 1dc3111cf66be94186d6c3235953613a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerNetwork
   - hash:
       serializedVersion: 2
       Hash: 12e64d607873da15ad3f833620350d51
@@ -761,6 +887,12 @@ ScriptsOnlyBuild:
     className: NetworkMigrationManager
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CheckPoint
+  - hash:
+      serializedVersion: 2
       Hash: fbf15d41ba9fdc15dc8531bea879e5ab
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -809,6 +941,12 @@ ScriptsOnlyBuild:
     className: CinemachineVolumeSettings
   - hash:
       serializedVersion: 2
+      Hash: 7b7176e9b77c6bec00ab74bf39f13fb4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TestScript
+  - hash:
+      serializedVersion: 2
       Hash: 516824a435828eadd660ef2f1658a48e
     assemblyName: Unity.Analytics.DataPrivacy.dll
     namespaceName: UnityEngine.Analytics
@@ -845,6 +983,12 @@ ScriptsOnlyBuild:
     className: CinemachineHardLookAt
   - hash:
       serializedVersion: 2
+      Hash: af900f574e0a99b6abfbaa71a70b92a2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Client
+  - hash:
+      serializedVersion: 2
       Hash: 1dcb82730d983b77cec736c6ef19f814
     assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
     namespaceName: UnityEngine.Networking
@@ -873,6 +1017,18 @@ ScriptsOnlyBuild:
     assemblyName: com.unity.multiplayer-hlapi.Runtime.dll
     namespaceName: UnityEngine.Networking
     className: NetworkAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: f07ab1050f3adb0a077db6cb6dadfe0e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FakeControllerBoy
+  - hash:
+      serializedVersion: 2
+      Hash: 91b61c4f714c10419e6d3ad084e78257
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Turret
   - hash:
       serializedVersion: 2
       Hash: 5372ed2ce39229b1ac910757999a8be2
@@ -959,6 +1115,12 @@ ScriptsOnlyBuild:
     className: StandaloneInputModule
   - hash:
       serializedVersion: 2
+      Hash: 7c5703e942715a90b1b1785dfdfa498f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Server
+  - hash:
+      serializedVersion: 2
       Hash: b5c3dbcb94925c8b595ad16a62b44788
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -995,7 +1157,13 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
-      Hash: 67ea45dee46200622538b4fe7402802f
+      Hash: fe9bca58be1c22244b9544aec9afafca
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Blocks
+  - hash:
+      serializedVersion: 2
+      Hash: 0ceef67e97d7191a75ceca83fdee70f2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: characterMovement
@@ -1007,102 +1175,30 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 2cd9c220bb7bef393fe305d67a6c4b6c
+      Hash: c04bfcbe7b6fbd3d79f5386ea134c07e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Menu
-  - hash:
-      serializedVersion: 2
-      Hash: dd2cfa69fbfa68adbe48382a5bf3daf8
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: IPHolder
-  - hash:
-      serializedVersion: 2
-      Hash: b72ac42341570866b7d6ee3396f749d5
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PrefabHolder
-  - hash:
-      serializedVersion: 2
-      Hash: d62e1ee75568fb09742ab61c4d65a00f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: FakeObjectType
-  - hash:
-      serializedVersion: 2
-      Hash: d62e1ee75568fb09742ab61c4d65a00f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PrefabBasis
-  - hash:
-      serializedVersion: 2
-      Hash: f07ab1050f3adb0a077db6cb6dadfe0e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: FakeControllerBoy
-  - hash:
-      serializedVersion: 2
-      Hash: 7c5703e942715a90b1b1785dfdfa498f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Server
-  - hash:
-      serializedVersion: 2
-      Hash: af900f574e0a99b6abfbaa71a70b92a2
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Client
-  - hash:
-      serializedVersion: 2
-      Hash: 031a583f42967444a161e01753e4c4cb
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: NetworkObjectScript
-  - hash:
-      serializedVersion: 2
-      Hash: ed3a00a2bb0897a9f0c1d54043c817e5
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CheckMovingObjects
-  - hash:
-      serializedVersion: 2
-      Hash: 5319fc62f0a4f4194f027bd32a69e527
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerTest
-  - hash:
-      serializedVersion: 2
-      Hash: 7d4631ed1640490316f1a3a2aad2470d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SpawnPlayer
+    className: throwBoomerang
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: PlayerController
+    className: standOnBoomerang
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 7a06571de45dc76192e5a050719f3cbf
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Test
+    className: platformIgnoreRedPlayer
   - hash:
       serializedVersion: 2
-      Hash: 031a583f42967444a161e01753e4c4cb
+      Hash: f989df3c1c4484876f42a97733688801
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: PlayerNetwork
-  - hash:
-      serializedVersion: 2
-      Hash: 7b7176e9b77c6bec00ab74bf39f13fb4
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: TestScript
+    className: boomerangAbility
   platform: 19
   scenePathNames:
-  - Assets/Scenes/MainMenu.unity
+  - Assets/Level Blockouts/MainMenu.unity
   - Assets/Level Blockouts/Initial Blockouts.unity
   playerPath: E:/StupidASS BUILD FOLDER/GameSam.exe
