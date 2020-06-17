@@ -1,5 +1,9 @@
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":190.2725372314453,"y":29.191165924072267,"z":-290.0859375},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":59.04618453979492,"orthographic":true}
 =======
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":13.361324310302735,"y":5.478741645812988,"z":-80.84765625},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":28.11446189880371,"orthographic":true}
 >>>>>>> SamEdit2ElectricBoogaloo2
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":78.25102996826172,"y":24.97963523864746,"z":-250.75},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":161.89947509765626,"orthographic":true}
+>>>>>>> Stashed changes
