@@ -8,6 +8,8 @@ public class crystalizePlayer : MonoBehaviour
     public GameObject platformObject;
     Animator animator;
     bool isCrystal = false;
+    public float cooldown;
+    public bool canCrystalize = true;
     characterMovement movement;
 
     CheckMovingObjects Check;
@@ -25,7 +27,7 @@ public class crystalizePlayer : MonoBehaviour
     {
         if (movement.Player1)
         {
-            if (Input.GetKeyDown(KeyCode.C))
+            if (Input.GetKeyDown(KeyCode.C) && canCrystalize)
             {
                 crystalize();
                 nAction act = new nAction();
@@ -44,8 +46,8 @@ public class crystalizePlayer : MonoBehaviour
 
     public void crystalize()
     {
-     
-        if(!isCrystal)
+
+        if (!isCrystal)
         {
             rigidBody.velocity = new Vector3(0, 0, 0);
             rigidBody.useGravity = false;
@@ -63,7 +65,15 @@ public class crystalizePlayer : MonoBehaviour
             isCrystal = false;
             animator.enabled = true;
             movement.canMove = true;
+            canCrystalize = false;
+            StartCoroutine(abilityCoolDown());
         }
-     
+
+    }
+
+    IEnumerator abilityCoolDown()
+    {
+        yield return new WaitForSeconds(cooldown);
+        canCrystalize = true;
     }
 }
