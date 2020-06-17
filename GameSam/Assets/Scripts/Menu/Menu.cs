@@ -23,7 +23,11 @@ public class Menu : MonoBehaviour
 
     public IPHolder IP;
 
+    public UnityEngine.UI.Image Logo;
 
+    float StartTime;
+
+    bool Once = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +37,17 @@ public class Menu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        StartTime += 0.005f;
+        Logo.color= new Color(Logo.color.r,Logo.color.g,Logo.color.b,(1 - StartTime));
+        if(Logo.color.a<=0 && !Once)
+        {
+            Logo.transform.position = new Vector3(60000000000, 600000000000, 60000000000);
+            Reset();
+            Once = true;
+        }
+
+
+
     }
 
     private void Reset()

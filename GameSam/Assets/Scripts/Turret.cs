@@ -17,9 +17,18 @@ public class Turret : MonoBehaviour
 
     public Button ButtonParent;
 
+
+    public bool Projectile;
+
+
+    public GameObject DeathZone;
+
     void Start()
     {
-        ButtonParent.Turrets.Add(this);
+        if (ButtonParent != null)
+        {
+            ButtonParent.Turrets.Add(this);
+        }
     }
 
 
@@ -38,9 +47,19 @@ public class Turret : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Fire)
+        if(Fire&& !Projectile)
         {
+            DeathZone.SetActive(true);
+        }
+    }
 
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.GetComponent<boomerangAbility>())
+        {
+            Destroy(DeathZone);
+            Destroy(gameObject);
         }
     }
 }
