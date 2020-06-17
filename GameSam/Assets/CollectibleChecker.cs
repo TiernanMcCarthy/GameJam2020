@@ -7,7 +7,7 @@ public class CollectibleChecker : MonoBehaviour
 
     public List<Collectible> Collectables;
 
-    Goal Door;
+    public Goal Door;
 
     // Start is called before the first frame update
     void Awake()
@@ -18,6 +18,12 @@ public class CollectibleChecker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Collectables.Count==0)
+        {
+            Door.ExecuteGoal();
+            Destroy(gameObject);
+        }
         
+
     }
 }

@@ -25,7 +25,8 @@ public class Collectible : MonoBehaviour
     {
         if(other.GetComponent<characterMovement>())
         {
-
+            Checker.Collectables.Remove(this);
+            Destroy(gameObject);
         }
     }
 }
