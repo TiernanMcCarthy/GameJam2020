@@ -27831,6 +27831,7 @@ GameObject:
   m_Component:
   - component: {fileID: 941390064}
   - component: {fileID: 941390065}
+  - component: {fileID: 941390066}
   m_Layer: 0
   m_Name: Blue Block (13)
   m_TagString: Untagged
@@ -27901,6 +27902,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &941390066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941390063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72411c1397648cd4886e32dad198a282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Checker: {fileID: 0}
 --- !u!1 &945137126
 GameObject:
   m_ObjectHideFlags: 0
@@ -49074,6 +49088,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1691981198}
   - component: {fileID: 1691981199}
+  - component: {fileID: 1691981200}
   m_Layer: 0
   m_Name: Block (465)
   m_TagString: Untagged
@@ -49144,6 +49159,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1691981200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691981197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84657ff275393bc4c83520709716d984, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Collectables: []
 --- !u!1 &1698448666
 GameObject:
   m_ObjectHideFlags: 0
@@ -61072,6 +61100,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button
       objectReference: {fileID: 0}
+    - target: {fileID: 6582787222537693552, guid: 6653f17f1dacb524b84a0dce99ed17d7,
+        type: 3}
+      propertyPath: EndTarget
+      value: 
+      objectReference: {fileID: 1631397202}
     - target: {fileID: 6582787222537693566, guid: 6653f17f1dacb524b84a0dce99ed17d7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -61127,11 +61160,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6582787222537693552, guid: 6653f17f1dacb524b84a0dce99ed17d7,
-        type: 3}
-      propertyPath: EndTarget
-      value: 
-      objectReference: {fileID: 1631397202}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6653f17f1dacb524b84a0dce99ed17d7, type: 3}
 --- !u!1001 &7724890619144604322
