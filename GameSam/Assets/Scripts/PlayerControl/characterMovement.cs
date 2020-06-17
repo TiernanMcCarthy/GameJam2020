@@ -25,7 +25,14 @@ public class characterMovement : MonoBehaviour
 
     [Header("Jumping variables")]
     public float jumpForce;
+    public float yVelocity; //the y velocity - used for animations
+    public float groundedRemember; //how much time has passed since last being grounded
+    public float groundedRememberTime = 0.25f; //how much time the player can still jump for after leaving the ground
+    public float jumpPressRemember; //the amount of time since the jump button was last pressed
+    public float jumpRememberTimer = 0.2f; //how long jump inputs should be remembered for
+    public bool isJumping = false;
 
+    [Header("Networking Variables")]
     public bool Player1;
 
     public characterMovement OtherPlayer;
@@ -44,7 +51,16 @@ public class characterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        groundedRemember -= Time.deltaTime;
+        if(grounded)
+        {
+            groundedRemember = groundedRememberTime;
+        }
+        jumpPressRemember -= Time.deltaTime;
+        if(Input.GetButtonDown("Jump"))
+        {
+            jumpPressRemember = jumpRememberTimer;
+        }
     }
 
     private void FixedUpdate()
@@ -90,9 +106,9 @@ public class characterMovement : MonoBehaviour
                 }
 
             }
-            if (Input.GetButtonDown("Jump") && grounded)
+            //if (Input.GetButtonDown("Jump") && grounded)
+            if((jumpPressRemember > 0) && (groundedRemember > 0) && !isJumping)
             {
-
                 jump();
             }
         }
@@ -122,6 +138,8 @@ public class characterMovement : MonoBehaviour
 
 
         }
+        yVelocity = rigidBody.velocity.y;
+        animator.SetFloat("yVelocity", yVelocity);
         Camera.SetActive(Player1);
     }
     private void jump()
@@ -144,6 +162,11 @@ public class characterMovement : MonoBehaviour
     private void checkSurroundings()
     {
         grounded = Physics.CheckSphere(groundChecker.position, GroundCheckRadius, groundLayerMask);
+        animator.SetBool("isGrounded", grounded);
+        if(grounded && rigidBody.velocity.y <=0)
+        {
+            isJumping = false;
+        }
     }
 
     public void Respawn()
