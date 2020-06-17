@@ -31,15 +31,40 @@ public class Parralax : MonoBehaviour
 
     public float MiddlegroundY = -0.05f;
 
+
+    CheckMovingObjects Check;
+
+    public Rigidbody Player1;
+    public Rigidbody Player2;
+
     void Start()
     {
-        
+        Check = FindObjectOfType<CheckMovingObjects>();
+
+        if(Check.Hosting)
+        {
+            ActivePlayer = Player1;
+        }
+        else
+        {
+            ActivePlayer = Player2;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if(Check!=null)
+        {
+            if (Check.Hosting)
+            {
+                ActivePlayer = Player1;
+            }
+            else
+            {
+                ActivePlayer = Player2;
+            }
+        }
         if(ActivePlayer!=null)
         {
 
