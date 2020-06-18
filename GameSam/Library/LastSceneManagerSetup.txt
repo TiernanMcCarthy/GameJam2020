@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Parralax Scene.unity
+- path: Assets/Scenes/f.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

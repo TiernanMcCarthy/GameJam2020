@@ -61,7 +61,7 @@ public class standOnBoomerang : MonoBehaviour
             rigidBody.isKinematic = true;
             collider.enabled = false;
             //rigidBody.useGravity = false;
-            transform.position = other.gameObject.GetComponentInParent<Transform>().position;
+            transform.position = other.gameObject.GetComponentInParent<Transform>().position+new Vector3(0,2.5f,0);
             this.transform.parent = other.gameObject.GetComponentInParent<Transform>();
             isRiding = true;
             movement.GetComponent<NetworkObjectScript>().Transmit = false;

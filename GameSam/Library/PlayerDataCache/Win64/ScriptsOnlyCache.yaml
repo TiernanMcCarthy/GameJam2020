@@ -57,99 +57,6 @@ ScriptsOnlyBuild:
     - UnityEngine.Networking.NetworkCallbacks
     - UnityEngine.Networking.NetworkIdentity
   sceneClasses:
-    Assets/Level Blockouts/MainMenu.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 65
-      Script: {instanceID: 0}
-    - Class: 74
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 82
-      Script: {instanceID: 0}
-    - Class: 83
-      Script: {instanceID: 0}
-    - Class: 91
-      Script: {instanceID: 0}
-    - Class: 95
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 9682}
-    - Class: 114
-      Script: {instanceID: 9732}
-    - Class: 114
-      Script: {instanceID: 9838}
-    - Class: 114
-      Script: {instanceID: 9840}
-    - Class: 114
-      Script: {instanceID: 9904}
-    - Class: 114
-      Script: {instanceID: 9918}
-    - Class: 114
-      Script: {instanceID: 9950}
-    - Class: 114
-      Script: {instanceID: 9964}
-    - Class: 114
-      Script: {instanceID: 10040}
-    - Class: 114
-      Script: {instanceID: 10074}
-    - Class: 114
-      Script: {instanceID: 10206}
-    - Class: 114
-      Script: {instanceID: 10518}
-    - Class: 114
-      Script: {instanceID: 11002}
-    - Class: 114
-      Script: {instanceID: 11068}
-    - Class: 114
-      Script: {instanceID: 11084}
-    - Class: 114
-      Script: {instanceID: 11348}
-    - Class: 114
-      Script: {instanceID: 11524}
-    - Class: 114
-      Script: {instanceID: 11742}
-    - Class: 114
-      Script: {instanceID: 12234}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
-    - Class: 135
-      Script: {instanceID: 0}
-    - Class: 136
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 212
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
     Assets/Scenes/Parralax Scene.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -210,37 +117,37 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10950}
     - Class: 114
-      Script: {instanceID: 11144}
+      Script: {instanceID: 11134}
     - Class: 114
-      Script: {instanceID: 11190}
+      Script: {instanceID: 11146}
     - Class: 114
-      Script: {instanceID: 11456}
+      Script: {instanceID: 11192}
     - Class: 114
-      Script: {instanceID: 11478}
+      Script: {instanceID: 11458}
     - Class: 114
-      Script: {instanceID: 11568}
+      Script: {instanceID: 11480}
     - Class: 114
-      Script: {instanceID: 11766}
+      Script: {instanceID: 11570}
     - Class: 114
-      Script: {instanceID: 11868}
+      Script: {instanceID: 11768}
     - Class: 114
-      Script: {instanceID: 11884}
+      Script: {instanceID: 11870}
     - Class: 114
-      Script: {instanceID: 12030}
+      Script: {instanceID: 11886}
     - Class: 114
-      Script: {instanceID: 12042}
+      Script: {instanceID: 12032}
     - Class: 114
-      Script: {instanceID: 12200}
+      Script: {instanceID: 12044}
     - Class: 114
-      Script: {instanceID: 12238}
+      Script: {instanceID: 12202}
     - Class: 114
-      Script: {instanceID: 12264}
+      Script: {instanceID: 12240}
     - Class: 114
-      Script: {instanceID: 12302}
+      Script: {instanceID: 12266}
     - Class: 114
-      Script: {instanceID: 12314}
+      Script: {instanceID: 12304}
     - Class: 114
-      Script: {instanceID: 412874}
+      Script: {instanceID: 12316}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 135
@@ -256,6 +163,93 @@ ScriptsOnlyBuild:
     - Class: 212
       Script: {instanceID: 0}
     - Class: 213
+      Script: {instanceID: 0}
+    Assets/Scenes/f.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9682}
+    - Class: 114
+      Script: {instanceID: 9732}
+    - Class: 114
+      Script: {instanceID: 9838}
+    - Class: 114
+      Script: {instanceID: 9840}
+    - Class: 114
+      Script: {instanceID: 9904}
+    - Class: 114
+      Script: {instanceID: 9918}
+    - Class: 114
+      Script: {instanceID: 9950}
+    - Class: 114
+      Script: {instanceID: 9964}
+    - Class: 114
+      Script: {instanceID: 10040}
+    - Class: 114
+      Script: {instanceID: 10074}
+    - Class: 114
+      Script: {instanceID: 10206}
+    - Class: 114
+      Script: {instanceID: 10518}
+    - Class: 114
+      Script: {instanceID: 11002}
+    - Class: 114
+      Script: {instanceID: 11068}
+    - Class: 114
+      Script: {instanceID: 11084}
+    - Class: 114
+      Script: {instanceID: 11350}
+    - Class: 114
+      Script: {instanceID: 11526}
+    - Class: 114
+      Script: {instanceID: 11744}
+    - Class: 114
+      Script: {instanceID: 12236}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 135
+      Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -842,6 +836,12 @@ ScriptsOnlyBuild:
     className: CinemachineTargetGroup
   - hash:
       serializedVersion: 2
+      Hash: 11456f059a4ac675613af42079d558b3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AirToggle
+  - hash:
+      serializedVersion: 2
       Hash: 13f8f373b951cbaf0f891949929b196a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1284,14 +1284,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 11456f059a4ac675613af42079d558b3
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: AirToggle
   platform: 19
   scenePathNames:
-  - Assets/Level Blockouts/MainMenu.unity
+  - Assets/Scenes/f.unity
   - Assets/Scenes/Parralax Scene.unity
   playerPath: E:/StupidASS BUILD FOLDER/GameSam.exe
