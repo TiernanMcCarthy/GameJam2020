@@ -6311,7 +6311,7 @@ PrefabInstance:
         type: 3}
       propertyPath: tempStander
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 360379496}
     - target: {fileID: 3734335589441100607, guid: e9a1e9064dc26654eae814bc337283e9,
         type: 3}
       propertyPath: orthographic

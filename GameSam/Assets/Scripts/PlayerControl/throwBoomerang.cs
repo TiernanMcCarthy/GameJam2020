@@ -10,7 +10,7 @@ public class throwBoomerang : MonoBehaviour
     public standOnBoomerang tempStander;
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame

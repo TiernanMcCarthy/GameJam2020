@@ -16733,7 +16733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Collectables: []
-  Door: {fileID: 335197822}
+  door: {fileID: 0}
 --- !u!212 &480470459
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -40427,6 +40427,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Soundy: {fileID: 1389153477}
+  soundPosX: 0
+  playerPosX: 0
+  totalRange: 28
 --- !u!1 &1071954143
 GameObject:
   m_ObjectHideFlags: 0
@@ -42223,6 +42226,8 @@ MonoBehaviour:
   BackgroundMovementY: -0.05
   MiddlegroundX: -0.1
   MiddlegroundY: -0.05
+  Player1: {fileID: 0}
+  Player2: {fileID: 0}
 --- !u!1 &1110374416
 GameObject:
   m_ObjectHideFlags: 0
@@ -48276,6 +48281,8 @@ MonoBehaviour:
   BackgroundMovementY: -0.03
   MiddlegroundX: -0.2
   MiddlegroundY: -0.05
+  Player1: {fileID: 0}
+  Player2: {fileID: 0}
 --- !u!4 &1266946641
 Transform:
   m_ObjectHideFlags: 0
@@ -62521,6 +62528,8 @@ MonoBehaviour:
   BackgroundMovementY: -0.03
   MiddlegroundX: -0.2
   MiddlegroundY: -0.05
+  Player1: {fileID: 0}
+  Player2: {fileID: 0}
 --- !u!4 &1651542019
 Transform:
   m_ObjectHideFlags: 0
@@ -66529,6 +66538,8 @@ MonoBehaviour:
   BackgroundMovementY: -0.03
   MiddlegroundX: -0.2
   MiddlegroundY: -0.05
+  Player1: {fileID: 0}
+  Player2: {fileID: 0}
 --- !u!4 &1763321304
 Transform:
   m_ObjectHideFlags: 0
@@ -81225,6 +81236,11 @@ PrefabInstance:
       propertyPath: Player1
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3734335588488881609, guid: e9a1e9064dc26654eae814bc337283e9,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2460538349970258082, guid: e9a1e9064dc26654eae814bc337283e9,
         type: 3}
       propertyPath: boomerang
@@ -81234,12 +81250,7 @@ PrefabInstance:
         type: 3}
       propertyPath: tempStander
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3734335588488881609, guid: e9a1e9064dc26654eae814bc337283e9,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 360379496}
     - target: {fileID: 3734335589441100607, guid: e9a1e9064dc26654eae814bc337283e9,
         type: 3}
       propertyPath: orthographic
