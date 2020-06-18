@@ -21,7 +21,7 @@ public class boomerangAbility : MonoBehaviour
 
     CheckMovingObjects check;
 
-    bool CollidedThisLife = false;
+    //bool CollidedThisLife = false;
 
     void Start()
     {
@@ -94,7 +94,8 @@ public class boomerangAbility : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Player" && !CollidedThisLife)
+        //&& !CollidedThisLife
+        if (collision.gameObject.tag == "Player" )
         {
             if (collision.gameObject == owner)
             {

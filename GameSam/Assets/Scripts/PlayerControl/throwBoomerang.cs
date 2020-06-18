@@ -16,7 +16,8 @@ public class throwBoomerang : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.X) && canThrow)
+        //Input.GetKeyDown(KeyCode.X) && canThrow
+        if (Input.GetKeyDown(KeyCode.X) && canThrow)
         {
             Vector3 spawnPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             moveScript = GetComponent<characterMovement>();
@@ -32,7 +33,10 @@ public class throwBoomerang : MonoBehaviour
 
     public void jumpOffBoomerang()
     {
-        tempStander.forcedOff();
+        if (tempStander.isRiding)
+        {
+            tempStander.forcedOff();
+        }
         Debug.Log("cool");
     }
 }

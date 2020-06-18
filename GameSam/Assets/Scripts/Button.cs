@@ -28,10 +28,20 @@ public class Button : MonoBehaviour
 
 
     public bool Turret = false;
+
+
+    List<int> FiringOrder;
+
     void Awake()
     {
         Turrets = new List<Turret>();
         OriginalShots = Shots;
+        FiringOrder = new List<int>();
+        FiringOrder.Add(0);
+        FiringOrder.Add(1);
+        FiringOrder.Add(1);
+        FiringOrder.Add(0);
+        FiringOrder.Add(2);
     }
 
 
@@ -51,8 +61,10 @@ public class Button : MonoBehaviour
                 if (Time.time - FireTime >= FireRate)
                 {
 
-                    int Index = Random.Range(0, Turrets.Count);
-                    Debug.Log(Index);
+                    // int Index = Random.Range(0, Turrets.Count);
+                    // Debug.Log(Index);
+
+                    int Index = FiringOrder[Shots - 1];
                     Turrets[Index].FireProjectile();
 
                     FireTime = Time.time;
@@ -67,7 +79,7 @@ public class Button : MonoBehaviour
             }
 
         }
-        else if(Firing)
+        else if (Firing)
         {
             EndTarget.ExecuteGoal();
             Firing = false;
@@ -83,18 +95,19 @@ public class Button : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag != "ground")
+        if (collision.gameObject.layer  != 8)
         {
-            if(!Firing)
+            if (!Firing)
             {
                 Firing = true;
             }
+           // Debug.Log("Im FUMING");
         }
     }
 
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.tag != "ground")
+        if (collision.gameObject.layer != 8)
         {
             if (!Firing)
             {

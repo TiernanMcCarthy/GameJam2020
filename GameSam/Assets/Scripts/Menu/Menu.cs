@@ -48,6 +48,7 @@ public class Menu : MonoBehaviour
 
 
 
+
     }
 
     private void Reset()
@@ -84,5 +85,10 @@ public class Menu : MonoBehaviour
     public void Back()
     {
         Reset();
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }

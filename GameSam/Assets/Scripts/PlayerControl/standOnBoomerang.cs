@@ -6,7 +6,7 @@ public class standOnBoomerang : MonoBehaviour
 {
     Rigidbody rigidBody;
     CapsuleCollider collider;
-    bool isRiding;
+    public bool isRiding;
     characterMovement movement;
     void Start()
     {
@@ -61,7 +61,7 @@ public class standOnBoomerang : MonoBehaviour
             rigidBody.isKinematic = true;
             collider.enabled = false;
             //rigidBody.useGravity = false;
-            transform.position = other.gameObject.GetComponentInParent<Transform>().position+new Vector3(0,2.5f,0);
+            transform.position = other.gameObject.GetComponentInParent<Transform>().position+new Vector3(0,1.5f,0);
             this.transform.parent = other.gameObject.GetComponentInParent<Transform>();
             isRiding = true;
             movement.GetComponent<NetworkObjectScript>().Transmit = false;

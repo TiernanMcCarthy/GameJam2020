@@ -29,6 +29,8 @@ public class Projectile : MonoBehaviour
             collision.gameObject.GetComponent<characterMovement>().Respawn();
            // Destroy(gameObject);
         }
+
+
         // else if(collision.gameObject.tag=="Boomerang")
         // {
         //   Destroy(gameObject);
