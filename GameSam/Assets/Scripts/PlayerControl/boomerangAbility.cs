@@ -86,9 +86,7 @@ public class boomerangAbility : MonoBehaviour
             if (timer >= maxTime * 2 + startReturnTime)
             {
                 throwScript.jumpOffBoomerang();
-                transform.position = new Vector3(300, 300, 0);
-                isActive = false;
-                throwScript.canThrow = true;
+                StartCoroutine(giveTimeToJumpOff());
             }
         }
       
@@ -128,5 +126,15 @@ public class boomerangAbility : MonoBehaviour
             isReturning = true;
             Physics.IgnoreCollision(owner.GetComponent<CapsuleCollider>(), bmCollider, false);
         }
+    }
+
+    IEnumerator giveTimeToJumpOff()
+    {
+        Debug.Log("before seconds waited");
+        yield return new WaitForSeconds(0.1f);
+        transform.position = new Vector3(300, 300, 0);
+        Debug.Log("yeah I need to return now lol");
+        isActive = false;
+        throwScript.canThrow = true;
     }
 }
