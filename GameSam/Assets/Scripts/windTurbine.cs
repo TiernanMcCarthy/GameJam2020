@@ -8,6 +8,8 @@ public class windTurbine : MonoBehaviour
     public BoxCollider detectionBox;
 
     public float Speed;
+
+    public bool Active = true;
     void Start()
     {
         

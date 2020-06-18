@@ -39,7 +39,7 @@ public class SoundZone : MonoBehaviour
             float temp = soundPosX - playerPosX;
             float temp2 = temp / totalRange;
             Soundy.volume = 1 - temp2;
-            Debug.Log("temp1: " + temp + " temp2: " + temp2 + "volume: " + Soundy.volume);
+           // Debug.Log("temp1: " + temp + " temp2: " + temp2 + "volume: " + Soundy.volume);
         }
     }
     private void OnTriggerExit(Collider other)
